@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Cabin:ital,wght@0,400..700;1,400..700&family=Jersey+10+Charted&family=Permanent+Marker&display=swap');
 
+@import url(sobre.css);
+
 * {
     padding: 0;
     margin: 0;
@@ -8,10 +10,15 @@
 header {
      
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
-    background-color: #281d3e;
+     background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     padding: 1rem;
+    position: fixed;
+    width: 98%;
 }
 
 .menu ul {
@@ -33,7 +40,7 @@ header {
     transform: translateY(-3px);
 }
 
-body {
+.inicio {
     min-height: 100vh;
     width: 100%;
     background-color: #b28ef8;
@@ -64,10 +71,15 @@ body {
   font-size: 1.5rem;
 }
 
-.titulo{ position: absolute;
+.nome{ position: absolute;
     left: 2rem;
     top: 1rem;
-    color: #b28ef8;
+    color: #db0080;
+
+    font-family: "Black Ops One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.0rem;
 }
 
 
@@ -83,14 +95,14 @@ body {
     max-width: 500px;
 }
 
-.btn-contato{
-    padding: 0.7rem 0.5rem;
+.btn-contato {
     background-color: #e52687;
-    border-radius: 0.7rem;
+    border-radius: 0.3rem;
 }
 
-.btn-contato:hover{
+.btn-contato::hover{
     color: #281d3e;
+    transform: scale(10px);
 }
 
 /*efeito de titulo
@@ -100,16 +112,19 @@ body {
     white-space: nowrap;
     border-right: 3px solid #B86BFF;
     animation: 
-        typing 3s steps(30) forwards,
-        cursor .7s infinite;
+        typing 7s steps(30) infinite,
+        cursor .7s forwards;
 }
 
 @keyframes typing {
-    from {
+    0% {
         width: 0;
     }
-    to {
-        width:30ch;
+    50% {
+        width:100%;
+    }
+    100% {
+        width: 100%;
     }
 }
 
