@@ -1,0 +1,179 @@
+@import url("sobre.css");
+@import url("footer.css");
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --rosa: #db0080;
+    --sombra:  rgba(255, 255, 255, 0.25);
+}
+
+
+/* ==========================================================================
+   FONTES
+   ========================================================================== */
+@font-face {
+    font-family: "Jersey 10 Charted";
+    src: url("../fonts/fontes_google_fonts/Jersey_10_Charted/Jersey10Charted-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Black Ops One";
+    src: url("../fonts/fontes_google_fonts/Black_Ops_One/BlackOpsOne-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url("../fonts/fontes_google_fonts/Ubuntu/Ubuntu-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Permanent Marker";
+    src: url("../fonts/fontes_google_fonts/Permanent_Marker/PermanentMarker-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+h1 , h2{
+    color: var(--rosa);
+}
+header {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    background-color: #281d3e;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 1rem;
+    position: fixed;
+    z-index: 1000;
+    width: 98%;
+}
+
+.menu ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: aliceblue;
+    padding: 0.5rem;
+    font-family: "Ubuntu", sans-serif;
+    transition:  color 1.1s ease, transform 1 ease;
+}
+
+.menu a:hover{
+    color: var(--rosa);
+    transition: all 0.2s ease;
+    box-shadow: 0 3px 0 0 #b28ef8
+}
+
+#inicio {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #eebfda;
+    
+   
+}
+
+#inicio {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    box-sizing: border-box;
+}
+
+.texto-inicio h1 {
+    color:#3f1636;
+    font-family: "Jersey 10 Charted", sans-serif;
+    font-size: 4rem;
+    font-weight: 400;
+}
+
+.Subtitulo {
+  color:  #001d41;
+  font-family: "Black Ops One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
+}
+
+.nome{ position: absolute;
+    left: 2rem;
+    top: 1rem;
+    color: var(--rosa);
+
+    font-family: "Black Ops One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.0rem;
+}
+
+
+.imagem-inicio {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagem-inicio img {
+    width: 100%;
+    max-width: 500px;
+}
+
+.btn-contato {
+    background-color: #db0080;
+    border-radius: 0.3rem;
+}
+
+.menu a.btn-contato:hover {
+    background-color: #B86BFF;
+    color: #281d3e;
+    transform: scale(1.03);
+}
+
+/*efeito de titulo
+*/.Subtitulo {
+   display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #B86BFF;
+    animation: 
+        typing 7s steps(30) infinite,
+        cursor .7s forwards;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    50% {
+        width:100%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+}

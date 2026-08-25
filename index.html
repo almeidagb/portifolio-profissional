@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio-web</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     
 </head>
 <body>
-    <script src="script.js"></script>
     <header>
         <p class="nome">Gabriele Almeida</p>
         <nav class="menu">
@@ -16,13 +16,13 @@
                 <li><a href="#inicio">Início</a></li>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#formacao">Trajetória</a></li>
-                <li><a href="#projetos">Projetos</a></li>
                 <li><a href="#ferramentas">Ferramentas</a></li>
+                <li><a href="#projetos">Projetos</a></li>
                 <li><a href="#contato" class="btn-contato">Contato</a></li>
             </ul>
         </nav>
     </header>
-    <section class="inicio">
+    <section id="inicio">
            <div class="texto-inicio">
         <h1 class=""><span class="highlight">Desenvolvimento</span> Web e de Software</h1>
         <p class="Subtitulo">Requisitos ° Python ° APIs REST</p>
@@ -32,25 +32,14 @@
     
 
     <div class="imagem-inicio">
-        <img src="3d.png" alt="Objeto 3D">
+        <img src="/static/img/3d.png" alt="Objeto 3D">
     </div>
-       
-        <a href="https://www.linkedin.com/in/gabriele-almeid/">
-            <i class="fa-brands fa-linkedin-in" style="color: rgb(197, 15, 63);"></i>
-        </a>
-        <a href="#"
-            <i class="fa-solid fa-envelope" style="color: rgb(197, 15, 63);"></i>
-        </a>
-        <div id="cassete"></div>
-
-
-
     </section>
 
-    <section class="sobre">
+    <section id="sobre">
         <h1 class="titulo-secao">Sobre mim</h1>
         <div class="sobre-container">
-            <img src="/eu.jpg" alt="">
+            <img src="/static/img/image.png" alt="">
             <div class="sobre-biografia">
                  <h2>Quem Codifica </h2>
                 <p>Estudante do 6º período de <span class="biografia">Engenharia de Software</span> , focada em aplicar na prática o que aprendo na faculdade. Através de projetos acadêmicos e integradores em equipe, venho construindo <span class="biografia">pequenas soluções</span> digitais passando pela documentação, sistemas de gerenciamento, landing pages e blogs. Este <span class="biografia">portfólio </span>reúne essa minha evolução ao longo do curso. Busco uma oportunidade de estágio para aprender e evoluir ainda mais no mercado
@@ -61,22 +50,125 @@
             </div>
         </div>
     </section>
-    <section class="formacao">
+    <section id="formacao">
         <h1 class="titulo-secao">Formação Acadêmica</h1>
 
         <div class="formacao-container">
-            <h2>Bacharelado em Engenharia de Software</h2>
-            <p>2024-2027</p>
-            <p class="universidade">Universidade de Vassouras</p>
+            <div class="formacao-curso">
+                <h2>Bacharelado em Engenharia de Software</h2>
+                <p class="ano"><strong>2024-2027</strong></p>
+                <p class="universidade"><strong>Universidade de Vassouras</strong></p>
+                <p class="local"> 
+                    <a href="https://www.bing.com/search?q=universidade%20de%20vassouras%20mapa&qs=ds&form=EX0050&shtp=GetUrl&shid=77fb6a03-2e34-48e3-a125-96868b8bb1c3">Local
+                        <i class="fa-solid fa-location-dot"></i>
+                    </a>
 
-            <p class="progresso">Progresso Universitário</p>
+                    </p>
+            </div>
             <div class="progresso-container">
-                <div class="progresso-medida">
-                    <p class="porcentagem">75%</p>
+                <p class="progresso">Restam apenas: </p>
+                <div class="cronometro">
+                    
+                    <div class="tempo">
+                        <span id="anos">0</span>
+                        <p>Anos</p>
+                    </div>
+
+                    <div class="tempo">
+                        <span id="meses">0</span>
+                        <p>Meses</p>
+                    </div>
+
+                    <div class="tempo">
+                        <span id="dias">0</span>
+                        <p>Dias</p>
+                    </div>
+
+                </div>
+
+                <div class="progresso-academico">
+                    <div class="progresso_avanco"> 
+                    <p class="porcentagem"></p>
                 </div>
             </div>
         </div>
     </section>
-    <section></section>
+    <section id="ferramentas">
+        <h2>Ferramentas e Tecnologias</h2>
+        
+
+
+
+
+        <div class="cards-container">
+
+            <div class="card">
+                <h3 class="card-title">Frameworks</h3>
+
+                <div class="tags-container">
+                    <span class="tag">Django</span>
+                    <span class="tag">Flask</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Banco de Dados</h3>
+
+                <div class="tags-container">
+                    <span class="tag"><i class="fa-solid fa-database"></i>Postgree</span>
+                    <span class="tag"><i class="fa-solid fa-database"></i>SQLite</span>
+                    <span class="tag"><i class="fa-solid fa-database"></i>MySQL</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Linguagens</h3>
+
+                <div class="tags-container">
+                    <span class="tag"><i class="fa-brands fa-python"></i></span>
+                    <span class="tag"><i class="fa-brands fa-js"></i></span>
+                    <span class="tag"><i class="fa-brands fa-html5"></i></span>
+                    <span class="tag"><i class="fa-brands fa-css3-alt"></i></span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Ferramentas</h3>
+
+                <div class="tags-container">
+                    <span class="tag"><i class="fa-brands fa-git-alt"></i></span>
+                    <span class="tag"><i class="fa-brands fa-github"></i></span>
+                    <span class="tag"><i class="fa-brands fa-docker"></i></span>
+                    <span class="tag"><i class="fa-brands fa-figma"></i></span>
+                </div>
+            </div>
+        </div>
+</section>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="rodape">
+        <a href="https://www.linkedin.com/in/gabriele-almeid/">
+            <i class="fa-brands fa-linkedin-in" style="color: rgb(197, 15, 63);"></i>
+        </a>
+        <a href="#"
+            <i class="fa-solid fa-envelope" style="color: rgb(197, 15, 63);"></i>
+        </a>
+        <p>kkkkkkkk</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
