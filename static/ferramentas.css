@@ -1,0 +1,248 @@
+#ferramentas {
+    width: 95%;
+    min-height: 100vh;
+    margin: 40px auto;
+    padding: 80px 5%;
+    border-radius: 50px;
+    background-color: var(--fundo_rosa);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0.05) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.05) 1px,
+            transparent 1px
+        );
+    background-size: 25px 25px;
+}
+
+#ferramentas > h2 {
+    margin: 0 0 10px;
+    color: var(--rosa);
+    font-family: "Black Ops One", system-ui;
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.subtitulo-ferramentas {
+    max-width: 650px;
+    margin: 0 auto 45px;
+    color: #130927;
+    font-family: "Jersey 10 Charted", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.cards-container {
+    width: 100%;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.card {
+    position: relative;
+    min-height: 220px;
+    padding: 30px;
+    border: 1px solid rgba(230, 25, 126, 0.6);
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.07);
+    display: flex;
+    flex-direction: column;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: var(--rosa);
+    box-shadow: 0 15px 35px rgba(230, 25, 126, 0.2);
+}
+
+.card-cabecalho {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.card-cabecalho > i {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: linear-gradient(
+        135deg,
+        #25113f,
+        #130927
+    );
+    color: var(--rosa);
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+.card-title {
+    margin: 0;
+    color: #130927;
+    font-size: 1.4rem;
+}
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.tag {
+    flex: 1;
+    min-width: 110px;
+    padding: 14px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: var(--rosa);
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.tag:hover {
+    transform: translateY(-4px);
+    background: rgba(219, 0, 128, 0.15);
+}
+
+.tag i {
+    color: var(--rosa);
+    font-size: 1.8rem;
+}
+
+.tag span {
+    font-family: "Cabin", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+
+    #ferramentas {
+        width: 92%;
+        padding: 70px 5%;
+    }
+
+    #ferramentas > h2 {
+        font-size: 2.2rem;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr;
+        max-width: 650px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    #ferramentas {
+        width: 92%;
+        min-height: auto;
+        margin: 25px auto;
+        padding: 60px 5%;
+        border-radius: 30px;
+    }
+
+    #ferramentas > h2 {
+        font-size: 1.8rem;
+    }
+
+    .subtitulo-ferramentas {
+        margin-bottom: 30px;
+        font-size: 0.9rem;
+    }
+
+    .cards-container {
+        gap: 18px;
+    }
+
+    .card {
+        min-height: auto;
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .card-cabecalho {
+        margin-bottom: 20px;
+    }
+
+    .card-cabecalho > i {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .tags-container {
+        gap: 10px;
+    }
+
+    .tag {
+        min-width: 85px;
+        padding: 12px 8px;
+    }
+
+    .tag i {
+        font-size: 1.5rem;
+    }
+
+    .tag span {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 400px) {
+
+    #ferramentas {
+        width: 94%;
+        padding: 50px 4%;
+        border-radius: 25px;
+    }
+
+    #ferramentas > h2 {
+        font-size: 1.5rem;
+    }
+
+    .subtitulo-ferramentas {
+        font-size: 0.85rem;
+    }
+
+    .card {
+        padding: 16px;
+    }
+
+    .tag {
+        min-width: 75px;
+    }
+}

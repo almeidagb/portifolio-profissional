@@ -1,0 +1,285 @@
+#formacao {
+    min-height: 80vh;
+    width: 100%;
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.formacao-curso {
+    background-color: #eebfda;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.formacao-container {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 5rem;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.formacao-container > div {
+    flex: 1;
+    min-width: 0;
+    box-shadow: 0 4px 15px #8867ca;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formacao-container > div:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px var(--sombra);
+}
+
+.progresso-container {
+    background-color: #eebfda;
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px #8867ca;
+    align-items: center;
+    text-align: center;
+}
+
+.progresso-academico {
+    width: 90%;
+    height: 2rem;
+    margin: 1rem auto;
+    padding: 0.2rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: beige;
+    border: 0.1rem solid #b6b3b9;
+    border-radius: 3rem;
+}
+
+.progresso_avanco {
+    width: 0%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: var(--rosa);
+    border-radius: 1rem;
+    transition: width 2s ease-in-out;
+}
+
+.porcentagem {
+    margin: 0;
+    color: #130927;
+    font-family: "Black Ops One", system-ui;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.progresso {
+    margin: 0.2rem;
+    color: var(--rosa);
+    font-family: "Black Ops One", system-ui;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.universidade {
+    width: 40%;
+    margin: 1rem 1rem 1rem 0;
+    padding: 0.3rem;
+    background-color: #e5e0eb;
+    color: #db0080;
+    border-radius: 1rem;
+}
+
+.local i,
+.local a {
+    color: rgb(197, 15, 63);
+    text-decoration: none;
+}
+
+.ano {
+    margin: 0.5rem 0 0;
+    color: #db0080;
+}
+
+.formacao-curso h2 {
+    color: var(--rosa);
+    font-family: "Black Ops One", system-ui;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.cronometro {
+    width: 80%;
+    min-height: 2rem;
+    margin: 0 auto;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.tempo {
+    min-width: 90px;
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.tempo span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.tempo p {
+    margin: 8px 0 0;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.6;
+}
+
+@media (max-width: 900px) {
+    #formacao {
+        padding: 50px 0;
+    }
+
+    .formacao-container {
+        width: 92%;
+        gap: 2rem;
+    }
+
+    .universidade {
+        width: 50%;
+    }
+
+    .cronometro {
+        width: 90%;
+        gap: 12px;
+        padding: 1.5rem;
+    }
+
+    .tempo {
+        min-width: 75px;
+        padding: 12px 8px;
+    }
+
+    .tempo span {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 700px) {
+    #formacao {
+        padding: 40px 0;
+    }
+
+    .formacao-container {
+        width: 90%;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .formacao-container > div {
+        width: 100%;
+    }
+
+    .formacao-curso {
+        padding: 1.5rem;
+    }
+
+    .formacao-curso h2 {
+        font-size: 1.3rem;
+    }
+
+    .universidade {
+        width: 100%;
+    }
+
+    .progresso-academico {
+        width: 90%;
+    }
+
+    .cronometro {
+        width: 90%;
+        padding: 1rem;
+        gap: 8px;
+    }
+
+    .tempo {
+        min-width: 0;
+        width: 30%;
+        padding: 12px 5px;
+    }
+
+    .tempo span {
+        font-size: 1.2rem;
+    }
+
+    .tempo p {
+        font-size: 0.65rem;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 450px) {
+    #formacao {
+        padding: 30px 0;
+    }
+
+    .formacao-container {
+        width: 92%;
+    }
+
+    .formacao-curso {
+        padding: 1rem;
+    }
+
+    .formacao-curso h2 {
+        font-size: 1.1rem;
+    }
+
+    .progresso {
+        font-size: 1.2rem;
+    }
+
+    .progresso-academico {
+        height: 1.7rem;
+    }
+
+    .cronometro {
+        width: 95%;
+        gap: 5px;
+        padding: 0.8rem;
+    }
+
+    .tempo {
+        padding: 10px 3px;
+    }
+
+    .tempo span {
+        font-size: 1rem;
+    }
+
+    .tempo p {
+        margin-top: 6px;
+        font-size: 0.55rem;
+        letter-spacing: 0.5px;
+    }
+}

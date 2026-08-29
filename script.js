@@ -1,5 +1,5 @@
 
-const datainicio = new Date("2024-02-19")
+const dataInicio = new Date("2024-02-19")
 const dataFinal = new Date("2027-12-31");
 
 function cronometro() {
@@ -35,20 +35,56 @@ function cronometro() {
 cronometro();
 setInterval(cronometro, 1000);
 
-   function barra_progresso() {
+ function barra_progresso() {
+
     const dataAtual = new Date();
 
-    const tempoTotal = dataFinal - datainicio;
-    const tempoPassado = dataAtual - datainicio;
+    const tempoTotal = dataFinal - dataInicio;
+    const tempoPassado = dataAtual - dataInicio;
 
     const porcentagem = (tempoPassado / tempoTotal) * 100;
 
-    const porcentagem_texto = document.querySelector(".porcentagem");
+    const porcentagemTexto = document.querySelector(".porcentagem");
     const barra = document.querySelector(".progresso_avanco");
 
-    barra.style.width = porcentagem + "%";
-    porcentagem_texto.textContent = porcentagem.toFixed(1) + "%";
+    // Mostra a porcentagem atual
+    porcentagemTexto.textContent = porcentagem.toFixed(1) + "%";
+
+    // Garante que começa em 0
+    barra.style.width = "0%";
+
+    // Espera a página renderizar o 0% antes de aumentar
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            barra.style.width = porcentagem + "%";
+        });
+    });
 }
-barra_progresso();
-setInterval(barra_progresso, 1000);
+
+
+const secao = document.querySelector("#formacao");
+
+const observador = new IntersectionObserver((entradas) => {
+
+    entradas.forEach((entrada) => {
+
+        if (entrada.isIntersecting) {
+            barra_progresso();
+        }
+
+    });
+
+}, {
+    threshold: 0.5
+});
+
+observador.observe(secao);
+
+
+const menuToggle = document.querySelector(".menu-toggle");
+const menu = document.querySelector(".menu");
+
+menuToggle.addEventListener("click", () => {
+    menu.classList.toggle("ativo");
+});git
 

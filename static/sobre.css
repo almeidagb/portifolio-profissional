@@ -1,374 +1,178 @@
-
-:root {
-    --rosa: #db0080;
-    --sombra:#471a34;
+#sobre {
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 0 80px;
+    background-color: white;
 }
 
-#sobre{
-    background-color: #e5d8ff;
-    min-height: 100vh;
-    box-sizing: border-box;
+.titulo-secao {
+    margin: 0;
+    padding: 3rem 5%;
+    color: var(--rosa);
+    font-family: "Black Ops One", system-ui;
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.sobre-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+    background-color: var(--fundo_rosa);
+    border-radius: 1rem;
 }
 
 #sobre img {
-    width: 20%;
-    height: 15rem;
-    border-radius: 200%;
-    object-fit: cover
+    width: 280px;
+    height: 280px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-.sobre-container{
-    background-color: #eebfda;
-    display: flex;
-    width: 90%;
-    padding: 1.5rem;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
-    border-radius: 1em;}
-
-.sobre-biografia{
+.sobre-biografia {
+    width: 60%;
+    padding: 2rem;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 1rem;
     text-align: justify;
-    width: 50%;
-    padding: 2rem;
-    border-radius: 1rem;
 }
 
-.sobre:hover {
-    transform: scale(1.03);
-    box-shadow: 0 8px 25px var(--sombra);
-}
-
-.sobre-biografia h1 {
-    margin: 1rem;
-}
-.titulo-secao{
-    font-size: 2rem;
+.sobre-biografia h2 {
+    margin: 0 0 1rem;
+    color: #130927;
     font-family: "Black Ops One", system-ui;
-    font-weight: 400;
-    font-style: normal;
-    padding: 3rem;
-}
-
-.sobre-biografia h2{
-    margin: 0 1em 1rem 0rem;
     font-size: 1.5rem;
-    font-family: "Black Ops One", system-ui;
     font-weight: 400;
-    font-style: normal;
+}
+
+.sobre-biografia p {
+    margin: 0 0 1rem;
     color: #130927;
 }
 
-.sobre-biografia p{
-     color: #130927;
-}
-.biografia{
+.biografia {
     color: #db0080;
-}
-
-/*>>>>>>>>>>>>>>>>>>>>FORMAÇÃO ACADEMICA>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-#formacao{
-    min-height: 80vh;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-items: end;
-    align-items: center;
-    margin: 0 auto; 
-    background-color: #e5d8ff;
-}
-
-.formacao-curso{
-    background-color:#eebfda;
-    padding: 1rem;
-    border-radius: 1rem;
-   
-}
-
-.formacao-container {
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    gap: 5rem;
-    width: 90%;
-    margin: 0 auto;
-}
-
-.formacao-container > div {
-    flex: 1;
-    min-width: 0;
-    box-shadow: 0 4px 15px #8867ca;
-    
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-
-.formacao-container > div:hover {
-    transform: scale(1.03);
-    box-shadow: 0 8px 25px var(--sombra);
-}
-
-.progresso-container{
-    background-color: #513785;
-    background-color:#eebfda;
-    border-radius: 1rem;
-    box-shadow: 0 4px 15px #8867ca;
-    align-items: center;
-    text-align: center;
-}
-
-.progresso-academico {
-    background-color: beige;
-    width: 90%;
-    height: 2rem;
-    border-radius: 3rem;
-    border: 0.1rem solid #b6b3b9;
-    margin: 1rem 1rem;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    padding: 0.2rem;
-    box-sizing: border-box;
-}
-
-.progresso_avanco {
-    background-color: var(--rosa);
-    height: 100%;
-    width: 0%; /* o JavaScript vai alterar */
-    border-radius: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-}
-
-.porcentagem {
-    margin: 0;
-    color: #130927;
-}
-
-.progresso {
-    font-family: "Black Ops One", system-ui;
+    font-family: "Cabin", sans-serif;
+    font-size: 0.9rem;
     font-weight: 400;
-    font-style: normal;
-    font-size: 1.5rem;
-    margin: 0.2rem;
-    color: var(--rosa);
+    line-height: 1.7;
 }
 
- .universidade{
-    width: 35%;
-    background-color: #e5e0eb;
-    color: #db0080;
-    padding: 0.3rem;
-    border-radius: 1rem;
-    margin: 1rem 1rem 1rem 0rem;
- }
-.local i ,a {
-    color: rgb(197, 15, 63);
-    list-style: none;
-    text-decoration: none;
+@media (max-width: 900px) {
+
+    #sobre {
+        padding-bottom: 60px;
+    }
+
+    .titulo-secao {
+        padding: 2.5rem 5%;
+        font-size: 1.8rem;
+    }
+
+    .sobre-container {
+        width: 92%;
+        gap: 2.5rem;
+        padding: 1.5rem;
+    }
+
+    #sobre img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .sobre-biografia {
+        width: 60%;
+        padding: 1.5rem;
+    }
+
+    .sobre-biografia h2 {
+        font-size: 1.3rem;
+    }
+
+    .biografia {
+        font-size: 0.85rem;
+    }
 }
 
-.ano {
-    color: #db0080;
-    margin: 0.5rem 0rem 0rem 0rem;
+@media (max-width: 700px) {
+
+    #sobre {
+        padding: 20px 0 50px;
+    }
+
+    .titulo-secao {
+        padding: 2rem 5%;
+        font-size: 1.7rem;
+    }
+
+    .sobre-container {
+        width: 90%;
+        padding: 1.5rem;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    #sobre img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .sobre-biografia {
+        width: 100%;
+        padding: 1.5rem;
+        text-align: left;
+    }
+
+    .sobre-biografia h2 {
+        text-align: center;
+        font-size: 1.3rem;
+    }
+
+    .biografia {
+        font-size: 0.85rem;
+        line-height: 1.6;
+    }
 }
 
-.formacao-curso h2{
-  color: var(--rosa);
-  font-family: "Black Ops One", system-ui;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 1.5rem;
+@media (max-width: 450px) {
+
+    .titulo-secao {
+        padding: 1.8rem 1rem;
+        font-size: 1.5rem;
+    }
+
+    .sobre-container {
+        width: 92%;
+        padding: 1rem;
+        border-radius: 0.8rem;
+    }
+
+    #sobre img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .sobre-biografia {
+        padding: 1.2rem;
+        border-radius: 0.8rem;
+    }
+
+    .sobre-biografia h2 {
+        font-size: 1.1rem;
+    }
+
+    .biografia {
+        font-size: 0.8rem;
+        line-height: 1.6;
+    }
 }
-
-
-
-.cronometro{
-    display: flex;
-    height: 2rem;
-}
-
-.cronometro {
-    display: flex;
-    width: 80%;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding: 1em;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 20px; 
-    background: rgba(255, 255, 255, 0.06);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-.tempo {
-    min-width: 90px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 15px 10px;
-    border-radius: 15px;
-    background: rgba(255, 255, 255, 0.05);
-}
-
-.tempo span {
-    font-size: 1.5rem;
-    font-weight: bold;
-    line-height: 1;
-}
-
-.tempo p {
-    margin: 8px 0 0;
-
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-
-    opacity: 0.6;
-}
-
-/*>FERRAMENTAS>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-body{
-background-color: #e5d8ff;}
-
-
-#ferramentas {
-    width: 95%;
-    min-height: 100vh;
-    border-radius: 5%;
-    background-color: #130927;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    margin: 0 auto;
-    padding: 60px 30px;
-}
-
-#ferramentas > h2 {
-    color: white;
-    font-size: 2.5rem;
-    margin-bottom: 50px;
-}
-
-.cards-container {
-    width: 100%;
-    max-width: 1000px;
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-.card {
-    position: relative;
-
-    background: rgba(255, 255, 255, 0.08);
-    border: 2px solid #e6197e;
-    border-radius: 24px;
-
-    padding: 30px 20px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    backdrop-filter: blur(8px);
-    overflow: hidden;
-
-    background-image:
-        linear-gradient(
-            to right,
-            rgba(255, 255, 255, 0.08) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            to bottom,
-            rgba(255, 255, 255, 0.08) 1px,
-            transparent 1px
-        );
-
-    background-size: 20px 20px;
-
-    box-shadow: 0 10px 25px rgba(230, 25, 126, 0.15);
-}
-
-.card::before {
-    content: '';
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-
-    height: 40%;
-
-    background: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0.15),
-        transparent
-    );
-
-    pointer-events: none;
-}
-
-
-.card:hover{
-    transform: scale(1.03);
-    transition: all 0.2s ease;
-}
-.card-title {
-    color: #ff4da6;
-
-    font-size: 1.5rem;
-    font-weight: 800;
-
-    margin-bottom: 25px;
-
-    position: relative;
-}
-
-.tags-container {
-    display: flex;
-    flex-wrap: wrap;
-
-    justify-content: center;
-    gap: 10px;
-
-    width: 100%;
-
-    position: relative;
-}
-
-.tag {
-    background: rgba(255, 240, 246, 0.95);
-
-    color: #d81b60;
-
-    font-weight: 700;
-    font-size: 1rem;
-
-    padding: 8px 18px;
-
-    border-radius: 14px;
-
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
-}
-/*27;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto; 
-}*/

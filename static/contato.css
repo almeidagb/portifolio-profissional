@@ -1,0 +1,147 @@
+#contato {
+    width: 100%;
+    min-height: 80vh;
+    padding: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--fundo_rosa);
+}
+
+.contato-titulo {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    margin: 0 auto;
+}
+
+.contato-titulo h1 {
+    margin: 0;
+    color: #3f1636;
+    font-family: "Jersey 10 Charted", sans-serif;
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    font-weight: 400;
+    line-height: 0.9;
+}
+
+.contato-titulo h1 span {
+    color: var(--rosa);
+}
+
+.contato-card {
+    width: 280px;
+    flex-shrink: 0;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.contato-card h2 {
+    margin: 0;
+    color: #302744;
+    font-size: 1.4rem;
+}
+
+.contato-icon {
+    margin: 5px 0;
+    font-size: 3.5rem;
+    color: #e9a5cf;
+}
+
+.contato-btn {
+    width: 100%;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background: #2b2340;
+    color: white;
+    text-decoration: none;
+    font-family: "Cabin", sans-serif;
+    font-weight: bold;
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.contato-btn:hover {
+    transform: scale(1.04);
+    background: var(--rosa);
+}
+
+@media (max-width: 900px) {
+    #contato {
+        min-height: auto;
+        padding: 80px 6%;
+    }
+
+    .contato-titulo {
+        max-width: 700px;
+        gap: 50px;
+    }
+
+    .contato-titulo h1 {
+        font-size: clamp(2.8rem, 7vw, 4.5rem);
+    }
+
+    .contato-card {
+        width: 260px;
+    }
+}
+
+@media (max-width: 700px) {
+    #contato {
+        padding: 70px 6%;
+    }
+
+    .contato-titulo {
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .contato-titulo h1 {
+        font-size: clamp(3rem, 13vw, 4.5rem);
+    }
+
+    .contato-card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 400px) {
+    #contato {
+        padding: 60px 5%;
+    }
+
+    .contato-titulo {
+        gap: 30px;
+    }
+
+    .contato-titulo h1 {
+        font-size: 2.8rem;
+    }
+
+    .contato-card {
+        max-width: 280px;
+        padding: 20px;
+    }
+
+    .contato-icon {
+        font-size: 3rem;
+    }
+}
